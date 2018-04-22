@@ -90,7 +90,7 @@ async function router(router) {
       // Refetch avatar from gravatar if not in redis cache
       if (!cachedAvatar) {
         const user = await UserModel.findOne({
-          'metadata.gravatar': req.params.avatar,
+          'metadata.gravatarProxyId': req.params.avatar,
         });
 
         const gravatarUrl = await gravatarURL(user);

@@ -1,5 +1,7 @@
 # talk-plugin-gravatar
 
+[Demo](https://snorre.io/setting-up-coral-talk/?commentId=a0db735b-4822-44a2-a1d1-bfba4839e344)
+
 A simple Talk plugin to display Talk users' Gravatar avatars with as much
 privacy as possible. The plugin acts as a proxy to gravatar and never directly
 reveal the md5sum of a talk user's email. This avoids two key privacy concerns
