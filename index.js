@@ -33,7 +33,7 @@ module.exports = {
  */
 async function proxiedGravatarURL(user) {
   if (user.metadata.gravatarProxyId) {
-    return `/avatar/${user.metadata.gravatar}`;
+    return `/avatar/${user.metadata.gravatarProxyId}`;
   }
 
   const avatarId = uuid.v4();

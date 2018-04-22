@@ -24,7 +24,26 @@ This plugin was inspired by the blog post
 
 ## Installation
 
-Coming soon
+Add the plugin to the `plugins.default.json` file or create a `plugins.json`
+file and add it there. See the [Coral Talk plugin docs](https://docs.coralproject.net/talk/plugins/)
+for details about adding plugins.
+
+
+Example `plugins.json` file:
+
+```json
+{
+  "server": [
+    {"talk-plugin-gravatar": "^0.1.0"}
+  ],
+  "client": [
+    {"talk-plugin-gravatar": "^0.1.0"}
+  ]
+}
+```
+
+Then run `./bin/cli plugins reconcile` for source installs or an appropriate
+command for your talk installation to make the plugin available.
 
 ## How the plugin works
 
