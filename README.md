@@ -67,4 +67,36 @@ requests from the API.
 
 ## Development
 
-Coming soon
+Fork this repository if you have not already done so. Then follow the
+[Installation from source](https://docs.coralproject.net/talk/) guide to get a
+local copy of Talk. Once you have a local `talk` folder enter the `plugins`
+directory and clone your forked repository:
+
+```
+$ cd plugins
+$ git clone git@github.com:<youruser>/talk-plugin-gravatar.git
+```
+
+Add a `plugins.json` file with the following contents under the `talk` folder:
+
+```json
+{
+  "server": [
+    "talk-plugin-gravatar"
+  ],
+  "client": [
+    "talk-plugin-gravatar"
+  ]
+}
+```
+
+Make sure you have set up mongodb and redis correctly and have configured Talk
+according to the setup guide. Finally run the talk development script:
+
+```bash
+$ yarn watch
+```
+
+This will start the Talk server with the plugin enabled. You will have to go
+through the Talk installation steps before you can create some test comments
+and see the plugin in action.
