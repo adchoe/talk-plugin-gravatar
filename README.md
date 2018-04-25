@@ -1,6 +1,6 @@
 # talk-plugin-gravatar
 
-[Demo](https://snorre.io/setting-up-coral-talk/?commentId=a0db735b-4822-44a2-a1d1-bfba4839e344)
+[Demo](https://snorremd.github.io/talk-plugin-gravatar)
 
 A simple Talk plugin to display Talk users' Gravatar avatars with as much
 privacy as possible. The plugin acts as a proxy to gravatar and never directly
@@ -24,6 +24,14 @@ info can be used by Gravatar to see which sites a user is posting on.
 This plugin was inspired by the blog post
 [How Gravatar hurts your visitors](https://fly.io/articles/how-gravatar-hurts-your-visitors/).
 
+## Caveats
+
+Gravatar still learns the IP of the Talk instance being used for comments thus
+revealing which possible sites a user has commented on. The Fly.io solution
+does not suffer this problem as their proxy, or the one you host yourself,
+bears no direct conncetion to any sites. Another caveat is the added load being
+imposed on your Talk instance.
+
 ## Installation
 
 Add the plugin to the `plugins.default.json` file or create a `plugins.json`
@@ -36,10 +44,10 @@ Example `plugins.json` file:
 ```json
 {
   "server": [
-    {"talk-plugin-gravatar": "^0.1.0"}
+    {"talk-plugin-gravatar": "^0.1.2"}
   ],
   "client": [
-    {"talk-plugin-gravatar": "^0.1.0"}
+    {"talk-plugin-gravatar": "^0.1.2"}
   ]
 }
 ```
@@ -100,3 +108,12 @@ $ yarn watch
 This will start the Talk server with the plugin enabled. You will have to go
 through the Talk installation steps before you can create some test comments
 and see the plugin in action.
+
+## Demonstration
+
+<div id="coral_talk_stream"></div>
+<script src="https://talk.snorre.io/static/embed.js" async onload="
+  Coral.Talk.render(document.getElementById('coral_talk_stream'), {
+    talk: 'https://talk.snorre.io/'
+  });
+"></script>
