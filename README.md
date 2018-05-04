@@ -111,9 +111,4 @@ and see the plugin in action.
 
 ## Demonstration
 
-<div id="coral_talk_stream"></div>
-<script src="https://talk.snorre.io/static/embed.js" async onload="
-  Coral.Talk.render(document.getElementById('coral_talk_stream'), {
-    talk: 'https://talk.snorre.io/'
-  });
-"></script>
+See [Github page](https://snorremd.github.io/talk-plugin-gravatar/)
