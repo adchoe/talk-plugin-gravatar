@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const uuid = require('uuid');
 const fetch = require('node-fetch');
-const UserModel = require('models/user');
+const UserModel = require('../../models/user');
 const { createClientFactory } = require('../../services/redis');
 const client = createClientFactory();
 
@@ -12,7 +12,6 @@ module.exports = {
       avatar: String
     }
   `,
-
   // The User resolver will return the avatar from the embedded user metadata.
   resolvers: {
     User: {
@@ -21,7 +20,6 @@ module.exports = {
       },
     },
   },
-
   // Add gravatar proxy route to router
   router: router,
 };
